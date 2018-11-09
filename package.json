@@ -21,8 +21,8 @@
     "prettier": "^1.15.1"
   },
   "scripts": {
-    "build": "babel lib -d src",
-    "watch": "babel lib -d src --watch",
+    "build": "babel src -d lib",
+    "watch": "babel src -d lib --watch",
     "prepare": "run-s build"
   }
 }
