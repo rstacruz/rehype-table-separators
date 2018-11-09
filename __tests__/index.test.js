@@ -1,6 +1,6 @@
 /* @jsx hJsx */
 /* eslint-env jest */
-import apply from '../index'
+import apply from '../lib/index'
 
 /* eslint-disable no-unused-vars */
 // TODO: move these helpers into a separate place
