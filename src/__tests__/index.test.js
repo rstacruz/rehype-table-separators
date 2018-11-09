@@ -1,6 +1,6 @@
 /* @jsx h */
 /* eslint-env jest */
-import apply from '../src/index'
+import apply from '../index'
 import h from 'hastscript'
 import render from 'hast-util-to-html'
 
