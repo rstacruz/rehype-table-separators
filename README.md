@@ -7,7 +7,7 @@ rehype-table-separators
 </h1>
 
 <p align='center'>
-Add table separators for Rehype
+Add table separators to Rehype AST's
 </p>
 
 <p align='center'>
