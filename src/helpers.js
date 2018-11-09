@@ -20,15 +20,21 @@ export function isSeparatorRow(tr) {
  */
 
 export function isSeparatorTD(td) {
-  return (
-    td &&
-    td.type === 'element' &&
-    td.tagName === 'td' &&
-    td.children &&
-    td.children.length === 1 &&
-    td.children[0].type === 'text' &&
-    td.children[0].value.match(/^\s*-+\s*$/)
-  )
+  if (!td) return false
+
+  const isTD = td.type === 'element' && td.tagName === 'td'
+  if (!isTD) return false
+
+  const hasOneChild = td.children && td.children.length === 1
+  if (hasOneChild) {
+    const isText = td.children[0].type === 'text'
+    if (!isText) return false
+
+    const isDashes = td.children[0].value.match(/^\s*-*\s*$/)
+    if (!isDashes) return false
+  }
+
+  return true
 }
 
 /**
